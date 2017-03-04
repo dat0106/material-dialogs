@@ -45,7 +45,7 @@ class DefaultRvAdapter extends RecyclerView.Adapter<DefaultRvAdapter.DefaultVH> 
     }
 
     @Override public DefaultVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(parent.getContext())
+        final View view = LayoutInflater.from(dialog.getBuilder().context)
                 .inflate(layout, parent, false);
         DialogUtils.setBackgroundCompat(view, dialog.getListSelector());
         return new DefaultVH(view, this);
